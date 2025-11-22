@@ -93,7 +93,7 @@ export default function Map() {
             </button>
           )}
 
-          {destination && eta && <div className="eta">⏱ Tiempo estimado: {eta} min</div>}
+          {destination && eta && <div className="eta">⏱ Tiempo estimado: {Math.floor(eta / 60)}h {eta % 60}m</div>}
 
           {destination && (
             <button
