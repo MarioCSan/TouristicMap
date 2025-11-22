@@ -1,0 +1,97 @@
+[
+  {
+    "name": "Plaza de la Ciudad Vieja",
+    "coords": [50.087, 14.4208],
+    "category": "histórico"
+  },
+  {
+    "name": "Reloj Astronómico",
+    "coords": [50.087, 14.4208],
+    "category": "histórico"
+  },
+  {
+    "name": "Puente de Carlos",
+    "coords": [50.0865, 14.4114],
+    "category": "histórico/fotogénico"
+  },
+  {
+    "name": "Barrio Judío (Josefov)",
+    "coords": [50.0901, 14.4196],
+    "category": "histórico"
+  },
+  {
+    "name": "Castillo de Praga",
+    "coords": [50.091, 14.401],
+    "category": "histórico/fotogénico"
+  },
+  {
+    "name": "Catedral de San Vito",
+    "coords": [50.0909, 14.4009],
+    "category": "histórico"
+  },
+  {
+    "name": "Callejón de Oro",
+    "coords": [50.0918, 14.4017],
+    "category": "histórico/fotogénico"
+  },
+  {
+    "name": "Malá Strana",
+    "coords": [50.086, 14.4044],
+    "category": "histórico/fotogénico"
+  },
+  {
+    "name": "Isla de Kampa",
+    "coords": [50.0846, 14.4090],
+    "category": "paisajístico/fotogénico"
+  },
+  {
+    "name": "Lennon Wall",
+    "coords": [50.0861, 14.4065],
+    "category": "arte/fotogénico"
+  },
+  {
+    "name": "Iglesia de San Nicolás",
+    "coords": [50.0862, 14.4042],
+    "category": "histórico"
+  },
+  {
+    "name": "Torre de Petřín",
+    "coords": [50.0833, 14.3958],
+    "category": "mirador/fotogénico"
+  },
+  {
+    "name": "Mirador de Letná",
+    "coords": [50.0931, 14.4165],
+    "category": "mirador/fotogénico"
+  },
+  {
+    "name": "Vyšehrad",
+    "coords": [50.0642, 14.4147],
+    "category": "histórico/mirador"
+  },
+  {
+    "name": "Mercado Náměstí Míru",
+    "coords": [50.0753, 14.4374],
+    "category": "mercado/navideño"
+  },
+  {
+    "name": "Plaza Wenceslao",
+    "coords": [50.0810, 14.4265],
+    "category": "histórico/comercial"
+  },
+  {
+    "name": "Casa Danzante",
+    "coords": [50.0755, 14.4147],
+    "category": "moderno/fotogénico"
+  },
+  {
+    "name": "Puente Mánes (vista Castillo)",
+    "coords": [50.0889, 14.4147],
+    "category": "mirador/fotogénico"
+  },
+  {
+    "name": "Tu hotel: Josephine Old Town Square",
+    "coords": [50.0858, 14.4202],
+    "category": "hotel"
+  }
+]

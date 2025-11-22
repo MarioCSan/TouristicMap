@@ -1,0 +1,66 @@
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+}
+
+/* Estilos pin clásico */
+.custom-marker-pin {
+  width: 25px;
+  height: 40px;
+  border-radius: 50% 50% 50% 50%;
+  transform: rotate(45deg);
+  position: relative;
+  border: 2px solid white;
+  box-shadow: 0 0 2px rgba(0,0,0,0.5);
+  background-color: gray; /* default */
+}
+
+.custom-marker-pin::after {
+  content: '';
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 12px;
+  left: 7px;
+}
+
+/* Colores personalizados */
+.custom-marker-pin.hotel { background-color: purple; }
+.custom-marker-pin.user  { background-color: green; }
+.custom-marker-pin.poi   { background-color: #8e44ad; }
+
+/* Panel ETA */
+.eta-box {
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  padding: 12px 20px;
+  border-radius: 12px;
+  font-size: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  z-index: 1000;
+  font-weight: 600;
+}
+
+/* App.css o Map.css */
+.poi-panel {
+  opacity: 0;
+  transform: translateX(-50%) translateY(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.poi-panel.visible {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
