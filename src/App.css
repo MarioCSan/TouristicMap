@@ -165,3 +165,221 @@
   border-style: solid;
   border-color: #F52798 transparent transparent transparent;
 }
+
+/* --------------------------------- */
+/* Contenedor general del mapa */
+/* --------------------------------- */
+.map-container {
+  position: fixed;
+  inset: 0;
+}
+
+/* MapContainer */
+.leaflet-map {
+  width: 100%;
+  height: 100%;
+}
+
+/* --------------------------------- */
+/* POI Modal / Ruta - Liquid Glass (Desktop) */
+/* --------------------------------- */
+.poi-modal {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%) translateY(0);
+  width: 95%;
+  max-width: 450px;
+  background-color: rgba(255, 255, 255, 0.7); /* semi-transparente */
+  backdrop-filter: blur(15px); /* vidrio esmerilado */
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  padding: 1.2rem;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  text-align: center;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Ocultar modal */
+.poi-modal.hide {
+  opacity: 0;
+  transform: translateX(-50%) translateY(20px);
+  pointer-events: none;
+}
+
+/* Encabezado modal */
+.poi-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  font-size: 1.05rem;
+  position: relative;
+}
+
+/* Botón cerrar modal ❌ */
+.close-btn {
+  position: absolute;
+  right: 0;
+  font-size: 0.85rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Botones de acción */
+.start-route-btn,
+.close-route-btn {
+  padding: 0.6rem;
+  border: none;
+  border-radius: 14px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.start-route-btn {
+  background-color: #007aff;
+  color: #fff;
+}
+.start-route-btn:hover { background-color: #005bb5; }
+
+.close-route-btn {
+  background-color: #e74c3c;
+  color: #fff;
+}
+.close-route-btn:hover { background-color: #c0392b; }
+
+/* Tiempo estimado (ETA) */
+.eta {
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-align: center;
+  padding: 0.5rem;
+  background-color: rgba(240, 240, 240, 0.6);
+  border-radius: 14px;
+}
+
+/* Botón flotante cerrar ruta */
+.floating-close-route-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 0.5rem 1rem;
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  z-index: 1000;
+  transition: opacity 0.3s ease;
+}
+
+/* --------------------------------- */
+/* Marcadores personalizados */
+/* --------------------------------- */
+.custom-marker div {
+  box-shadow: 0 0 5px rgba(0,0,0,0.5);
+  position: relative;
+}
+
+/* Punta del marcador */
+.custom-marker div::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 8px 4px 0 4px;
+  border-style: solid;
+  border-color: #F52798 transparent transparent transparent;
+}
+
+/* --------------------------------- */
+/* Versión móvil tipo iOS (pantallas < 768px) */
+/* --------------------------------- */
+@media (max-width: 768px) {
+  
+  .poi-modal {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%) translateY(0);
+  width: 95%;
+  max-width: 450px; /* un poco más grande */
+  background-color: rgba(255, 255, 255, 0.3); /* fondo semitransparente */
+  backdrop-filter: blur(15px); /* efecto vidrio esmerilado */
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  padding: 1.2rem;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  text-align: center;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.poi-modal.show {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.poi-modal.hide {
+  transform: translateX(-50%) translateY(20px);
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Header centrado */
+.poi-header {
+  display: flex;
+  justify-content: center; /* centrado */
+  align-items: center;
+  font-weight: 600;
+  font-size: 1.05rem;
+  position: relative;
+}
+
+/* Botón cerrar más pequeño */
+.close-btn {
+  position: absolute;
+  right: 0;
+  font-size: 0.85rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+
+  .start-route-btn,
+  .close-route-btn {
+    font-size: 1rem;
+    padding: 0.75rem 1rem;
+    border-radius: 999px; /* estilo pill */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  }
+
+  .start-route-btn { background-color: #007aff; color: #fff; }
+  .start-route-btn:hover { background-color: #005bb5; }
+
+  .close-route-btn { background-color: #ff3b30; color: #fff; }
+  .close-route-btn:hover { background-color: #c1271c; }
+
+  .eta {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+    border-radius: 999px; /* pill */
+    background-color: rgba(255, 255, 255, 0.6);
+  }
+}

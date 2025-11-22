@@ -39,7 +39,6 @@ export default function Map() {
   // Centrar en el POI al cerrar la ruta
   useEffect(() => {
     if (!destination && selectedPOI && mapRef.current) {
-      // Esperamos un pequeño delay para que la ruta se elimine
       const timer = setTimeout(() => {
         mapRef.current.flyTo(selectedPOI.coords, 16, { duration: 0.5 });
       }, 300);
@@ -108,19 +107,6 @@ export default function Map() {
             </button>
           )}
         </div>
-      )}
-
-      {/* Botón flotante para cerrar ruta */}
-      {destination && (
-        <button
-          className="floating-close-route-btn"
-          onClick={() => {
-            setDestination(null);
-            setShowPOIModal(true);
-          }}
-        >
-          ❌ Cerrar ruta
-        </button>
       )}
     </div>
   );
